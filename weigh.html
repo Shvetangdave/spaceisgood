@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your weight on different planets</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    .weightbackground {
+      background-image: url("images/weight background.jpg");
+      position: absolute;
+      height: 800px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: table;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: black
+    }
+    
+    html {
+      overflow-x: hidden;
+    }
+    
+    .weight-first,
+    h4 {
+      font-family: 'Oswald', sans-serif;
+      color: white;
+      
+      font-size: 35px;
+    }
+    
+    .weight-second {
+      padding: 50px;
+      font-family: 'Cardo', serif;
+      color: white;
+    
+      text-align-last: center;
+      font-size: 20px;
+    }
+    
+    input {
+      border-radius: 25px;
+      width: 85px;
+      font-size: 25px;
+    }
+    
+    input:invalid {
+      border: 3px solid red;
+    }
+    
+    span {
+      font-size: 25px;
+    }
+    
+    .mybut {
+      background-color: cyan;
+      font-size: 20px;
+    }
+    
+    .mybut:hover {
+      cursor: pointer;
+    }
+    
+    .planet {
+      width: 200px;
+      padding: 10px;
+      text-align: center;
+    }
+    .button{
+      padding-left: 80%;
+    }
+    .planet img {
+      margin-bottom: 1rem;
+    }
+    
+    .planet p {
+      margin-bottom: 0.2rem;
+    }
+    
+    p {
+      line-height: 1.5em;
+      font-size: .9em;
+      padding: 50px;
+      font-family: 'Cardo', serif;
+      color: white;
+      
+      text-align-last: center;
+    }
+    
+    .milkyway {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    
+    .ow {
+      font-family: 'Cardo', serif;
+      color: white;
+      
+      text-align-last: center;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body class="weightbackground">
+  <br>
+  <br>
+  <center>
+    <h1 class="weight-first">Your weight on differnet planets</h1>
+    <br>
+    <br>
+    <br>
+   
+  </center>
+  <br>
+  <br>
+  <br>
+  <center>
+    <h3 class="weight-first">Enter your weight</h3>
+    <br>
+    <br>
+    <div class="row">
+      <input id="hellohowareyou" type="number" pattern="[0-9]+"> &nbsp &nbsp<span class="weight-first">KG</span> &nbsp &nbsp<button onclick="Calculate();">Submit</button>
+    </div>
+    <br>
+    <br>
+    <div class="milkyway">
+      <div class="planet">
+        <h4>
+          MERCURY
+        </h4>
+        <a href="http://www.nineplanets.org/mercury.html"><img src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTFFRKg1XEC7kNu58XVZi9vPh6F9ii0FhevCdEAUKyMEtSdx4HLLLNBMacXXX0Y0gLv" height="100px" width="100px" alt="Mercury"></a>
+        <br><span class="ow" id="mw">Your weight on Mercury is               </span>
+      </div>
+      <div class="planet">
+        <h4>
+          VENUS
+        </h4>
+        <a href="http://www.nineplanets.org/venus.html"><img src="https://static01.nyt.com/images/2020/09/22/science/19SCI-OUTTHERE-VENUS1/19SCI-OUTTHERE-VENUS1-videoSixteenByNine3000.jpg?year=2020&h=1688&w=3000&s=d355373626bbbe65b35688e3f943b8fde1ed92a78475324389f6dbf3d91e910d&k=ZQJBKqZ0VN&tw=1"height="100px" width="125px"  alt="Venus"></a>
+        <br><span class="ow" id="vw">your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          THE MOON
+        </h4>
+        <a href="http://www.nineplanets.org/luna.html"><img src="https://cdn.mos.cms.futurecdn.net/snbrHBRigvvzjxNGuUtcck.jpg" height="100px" width="100px"alt="The Moon"></a>
+        <br><span class="ow" id="tmw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          MARS
+        </h4>
+        <a href="http://www.nineplanets.org/mars.html"><img src="https://solarsystem.nasa.gov/system/stellar_items/image_files/6_mars.jpg"height="100px" width="100px" alt="Mars"></a>
+        <br><span class="ow" id="msw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          JUPITER
+        </h4>
+        <a href="http://www.nineplanets.org/jupiter.html"><img src="https://solarsystem.nasa.gov/internal_resources/4909/"height="100px" width="100px" alt="Jupiter"></a>
+        <br><span class="ow" id="jw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          SATURN
+        </h4>
+        <a href="http://www.nineplanets.org/saturn.html"><img src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg"height="100px" width="100px" alt="Saturn"></a>
+        <br><span class="ow" id="sw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          URANUS
+        </h4>
+        <a href="http://www.nineplanets.org/uranus.html"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Uranus_as_seen_by_NASA%27s_Voyager_2_%28remastered%29_-_JPEG_converted.jpg" height="100px" width="100px"alt="Uranus"></a>
+        <br><span class="ow" id="uw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          NEPTUNE
+        </h4>
+        <a href="http://www.nineplanets.org/neptune.html"><img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcT9RN79wn9Nw-Bt_dn2TjGwLmVo7kxccffCzGa6e1onKI_QyOinDXZ-MMqL_McsRcR1"height="100px" width="100px" alt="Neptune"></a>
+        <br><span class="ow" id="nw">Your weight is:</span>
+      </div>
+      <div class="planet">
+        <h4>
+          PLUTO
+        </h4>
+        <a href="http://www.nineplanets.org/pluto.html"><img src="https://cdn.uanews.arizona.edu/s3fs-public/images/uanow/Pluto_UANow%20thmb.jpg"height="100px" width="100px" alt="Pluto"></a>
+        <br><span class="ow" id="pw">Your weight is:</span>
+        <br>
+      <br>
+      <button id="bac" onclick="back()" class="btn-danger" >Back</button>
+      <br>
+      <br>
+      </div>
+    
+
+    </div>
+    <script>
+      function Calculate() {
+        var weight = document.getElementById("hellohowareyou").value;
+        var mercury = weight * 0.37;
+        var venus = weight * 0.91;
+        var moon = weight * 0.166;
+        var mars = weight * 0.38;
+        var jupiter = weight * 2.34;
+        var saturn = weight * 1.06;
+        var uranus = weight * 0.92;
+        var neptune = weight * 1.12;
+        var pluto = weight * 0.06;
+        document.getElementById("mw").innerHTML = "Your weight on Mercury is  :  " + mercury;
+        document.getElementById("vw").innerHTML = "Your weight on Venus is : " + venus;
+        document.getElementById("tmw").innerHTML = "Your weight on Moon is : " + moon;
+        document.getElementById("msw").innerHTML = "Your weight on Mars is : " + mars;
+        document.getElementById("jw").innerHTML = "Your weight on Jupiter is : " + jupiter;
+        document.getElementById("sw").innerHTML = "Your weight on Saturn is : " + saturn;
+        document.getElementById("uw").innerHTML = "Your weight on Uranus is : " + uranus;
+        document.getElementById("nw").innerHTML = "Your weight on Neptune is : " + neptune;
+        document.getElementById("pw").innerHTML = "Your weight on Pluto is : " + pluto;
+      }
+      function back(){
+          window.location='index.html';
+
+         }
+      
+    </script>
+</body>
+
+
+</html>
